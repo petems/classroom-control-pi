@@ -22,7 +22,7 @@
 # specified in the console for that node.
 
 node sor609.puppetlabs.vm {
-  notify { "This is running only on sor609's machine" }
+  notify { "This is running only on sor609's machine": }
 }
 
 node default {

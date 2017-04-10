@@ -6,6 +6,6 @@ mod 'vcsrepo',
   :git => 'https://github.com/puppetlabs/puppetlabs-vcsrepo'
 
 mod 'stahnma/epel', '1.2.2'
-mod 'rioch/redis', '1.2.4'
+mod 'arioch/redis', '1.2.4'
 mod 'puppetlabs/registry', '1.1.4'
 

@@ -8,3 +8,4 @@ mod 'vcsrepo',
 mod 'stahnma/epel', '1.2.2'
 mod 'arioch-redis', '1.2.4'
 mod 'puppetlabs-registry', '1.1.4'
+mod 'dwerder/graphite', '7.0.0'

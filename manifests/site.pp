@@ -21,6 +21,14 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
+node gdunk.puppetlabs.vm {
+  notify { "This is the linux VM, very exciting": }
+}
+
+node gdunkwin.puppetlabs.vm {
+  notify { "I am a windows machine, hopefully" : }
+}
+
 node default {
   # This is where you can declare classes for all nodes.
   # Example:

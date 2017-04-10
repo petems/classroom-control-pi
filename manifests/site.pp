@@ -32,7 +32,7 @@ node hemakumar8.puppetlabs.vm {
   notify { "This will only be enforced on the Linux contain": }
   
   #notify { "Hello, change in Github": }
-  #notify { "This will only be enforced on the Linux contain": }
+  notify { "This will only be enforced on the Linux contain": }
 }
 
 node default {

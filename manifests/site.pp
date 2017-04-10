@@ -31,5 +31,6 @@ node default {
   
   notify { "This is the default message from the production environment": }
   
-  notify { "Hello, change in Github": }
+  #notify { "Hello, change in Github": }
+  notify { "test message": }
 }

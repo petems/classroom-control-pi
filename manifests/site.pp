@@ -23,11 +23,6 @@
 
 node gdunk.puppetlabs.vm {
   notify { "This is the linux VM, very exciting": }
-  registry_value { 'HKLM\System\CurrentControlSet\Services\Puppet\Description':
-    ensure => present,
-    type   => string,
-    data   => "The Puppet Agent service periodically manages your configuration",
-  }
 }
 
 node gdunkwin.puppetlabs.vm {

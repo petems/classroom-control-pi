@@ -33,5 +33,7 @@ node default {
   
 }
 node younesfadil.puppetlabs.vm {
+  include examples::puppetize
+  
   notify {"This will only be enforced on the Linux container.": }
 }

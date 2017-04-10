@@ -29,7 +29,7 @@ node default {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "This is the default message from the production environment": }
+  notify { "This is a message from the production environment, running on ${::fqdn}": }
   
   notify { "Hello, change in Github": }
 }

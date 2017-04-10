@@ -29,10 +29,10 @@ node hemakumar8.puppetlabs.vm {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "This is the default message from the production environment": }
+  notify { "This will only be enforced on the Linux contain": }
   
   #notify { "Hello, change in Github": }
-  notify { "This will only be enforced on the Linux contain": }
+  #notify { "This will only be enforced on the Linux contain": }
 }
 
 node default {

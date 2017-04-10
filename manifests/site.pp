@@ -20,7 +20,9 @@
 # definition. If there are no other nodes in this file, classes declared here
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
-
+node 'mahikunal.puppetlabs.vm' {
+  notify { "This messages is for node mahikunal.puppetlabs.vm to test the classification from site.pp": }
+}
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
@@ -29,7 +31,7 @@ node default {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "This is the default message from the production environment": }
+  #notify { "This is the default message from the production environment": }
   
   notify { "Hello, change in Github": }
 }

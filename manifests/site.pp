@@ -21,18 +21,18 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-node gdunk.puppetlabs.vm {
-  notify { "This is the linux VM, very exciting": }
-}
+#node gdunk.puppetlabs.vm {
+#  notify { "This is the linux VM, very exciting": }
+#}
 
-node gdunkwin.puppetlabs.vm {
-  notify { "I am a windows machine, hopefully" : }
-  registry_value { 'HKLM\System\CurrentControlSet\Services\Puppet\Description':
-    ensure => present,
-    type   => string,
-    data   => "The Puppet Agent service periodically manages your configuration",
-  }
-}
+#node gdunkwin.puppetlabs.vm {
+#  notify { "I am a windows machine, hopefully" : }
+#  registry_value { 'HKLM\System\CurrentControlSet\Services\Puppet\Description':
+#    ensure => present,
+#    type   => string,
+#    data   => "The Puppet Agent service periodically manages your configuration",
+#  }
+#}
 
 node default {
   # This is where you can declare classes for all nodes.
@@ -44,4 +44,8 @@ node default {
   
   notify { "This is the default message from the production environment": }
   notify { "Hello from Grant, this is the third update, running on ${::fqdn}": }
+  
+  unless $environment in [ 'production', 'staging' ] {
+    notify { "Warning: this is a development environment on ${::fqdn}": }
+  }
 }

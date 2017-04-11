@@ -9,6 +9,6 @@ class profile::admins {
   # manage several instances of our defined type
   skeleton::managed_user { ['jose', 'alice', 'bob']:
     password => $password,
-    homedir  => "/var/tmp/${title}",
+    home  => "/var/tmp/${title}",
   }
 }

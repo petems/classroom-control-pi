@@ -5,5 +5,7 @@ mod 'acme/ohmyzsh', '0.1.2'
 mod 'vcsrepo',
   :git => 'https://github.com/puppetlabs/puppetlabs-vcsrepo'
 
-# Installs the arioch/redis module
+# Installs the arioch/redis module, registry, epel
 mod 'arioch/redis'
+mod 'puppetlabs/registry'
+mod 'stahnma/epel'

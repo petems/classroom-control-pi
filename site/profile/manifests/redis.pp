@@ -1,6 +1,7 @@
 class profile::redis
 (
   $master = false
+  $bind_ip = '127.0.0.1',
 ) 
 {
   require profile::epel
@@ -13,7 +14,7 @@ class profile::redis
 
   class {'redis':
     maxmemory => '10mb',
-    bind      => $::ipaddress,
+    bind      => $bind_ip,
     slaveof   => $slaveof,
   }
 }

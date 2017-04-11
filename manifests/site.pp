@@ -44,9 +44,13 @@ node default {
   
   #notify { "This is the default message from the production environment": }
   #notify { "Hello from Grant, this is the third update, running on ${::fqdn}": }
-  
-  exec { "echo hello": }
   #exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd": }
+  
+  exec { 'cowsay_motd':
+    command   => "/usr/local/bin/cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+    creates    => '/etc/motd',
+  }
+  
   unless $environment in [ 'production', 'staging' ] {
     #notify { "Warning: this is a development environment on ${::fqdn}": }
     notify { "env is $environment": }

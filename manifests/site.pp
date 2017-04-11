@@ -31,8 +31,12 @@ node default {
   # example code for the classroom
   include examples::puppetize
   
-  unless $environment in [ 'production', 'staging' ] {
-  notify { "Warning: this is a development environment on ${::fqdn}": }
+  #unless $environment in [ 'production', 'staging' ] {
+  #notify { "Warning: this is a development environment on ${::fqdn}": }
+  exec{"cowsay "Welcome to ${::fqdn}!'>/etc/motd":
+    path => '/usr/bin:/usr/local/bin',
+    creates => '/etc/motd',
+    }
 }
 
 

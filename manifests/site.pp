@@ -28,10 +28,4 @@ node default {
   
   # example code for the classroom
   include examples::puppetize
-  
-  exec {'add cowsay to motd':
-    command => 'cowsay "Hello, welcome!" > /etc/motd',
-    creates => '/etc/motd',
-    path    => $::path,
-  }
 }

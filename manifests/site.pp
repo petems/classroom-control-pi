@@ -21,9 +21,7 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-node kishorethakur.puppetlabs.vm {
-  notify {"This will only be enforced on the Linux Containner.":}
-  }
+
   
 node default {
   # This is where you can declare classes for all nodes.
@@ -33,10 +31,9 @@ node default {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "This is the default message from the production environment": }
-  
-  notify { "Hello, change in Github ---- ": }
-  
-  notify { "Hello world! I am ${::fqdn}": }
+  unless $environment in [ 'production', 'staging' ] {
+  notify { "Warning: this is a development environment on ${::fqdn}": }
+}
+
 
 }

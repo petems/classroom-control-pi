@@ -1,5 +1,5 @@
 class profile::redis {
- $master = false 
+ $master = false,
  }
  {
   # We'll require our epel class so that it is enforced first.
@@ -13,7 +13,7 @@ class profile::redis {
   
   class { 'redis':
     # what parameter should we pass to set maxmemory to 10mb?
-    maxmemory => '10mb'
+    maxmemory => '10mb',
     slaveof = $slaveof,
   }
   

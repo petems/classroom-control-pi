@@ -33,8 +33,5 @@ node default {
   
   #unless $environment in [ 'production', 'staging' ] {
   #notify { "Warning: this is a development environment on ${::fqdn}": }
-  exec {"cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
-   path => '/usr/bin:/usr/local/bin',
-   creates => '/etc/motd'
-    }
+
 }

@@ -37,6 +37,3 @@ node default {
    
     }
 }
-
-
-}

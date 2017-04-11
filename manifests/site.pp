@@ -31,6 +31,6 @@ node default {
   # example code for the classroom
   include examples::puppetize
   unless $environment in [ 'production', 'staging' ] {
-  notify { "Warning: this is a development environment on ${::fqdn}": }
-  
+    notify { "Warning: this is a development environment on ${::fqdn}": }
   }
+}

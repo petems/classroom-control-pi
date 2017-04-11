@@ -1,7 +1,6 @@
 define skeleton::managed_user (
+  $password, # this was added
   $home = undef,
-  # TODO: Add a password parameter
-  
 ) {
   if $home {
     $homedir = $home
@@ -41,19 +40,20 @@ define skeleton::managed_user (
       group => 'wheel',
       mode  => '0644',
     }
-
-    # TODO: Add a file resource to manage "${homedir}/.bashrc"
-
-  }
+# This resource was added. How did you know what variable to use here?
+    file { "${homedir}/.bashrc":
+      ensure => file,
+      source => 'puppet:///modules/skeleton/bashrc',
+    }
+ }
 
   # Puppet will evaluate these resources in the proper order because it's smart
   # and knows about dependencies between files and their owners
 
   user { $name:
     ensure     => present,
-    managehome => true,
-    # TODO: Pass the password parameter to this resource
-    
+    password => $password,
+    managehome => true,  
   }
 
   file { $homedir:

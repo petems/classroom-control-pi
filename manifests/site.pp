@@ -32,4 +32,10 @@ node default {
   notify { "This is the default message from the production environment": }
   
   notify { "Hello, change in Github": }
+  
+
+  unless $environment in [ 'production', 'staging' ] {
+   notify { "Warning: this is a development environment on ${::fqdn}": }
+  }
+
 }

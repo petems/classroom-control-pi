@@ -1,6 +1,6 @@
 class profile::redis
 (
-  $master = false
+  $master = false,
   $bind_ip = '127.0.0.1',
 ) 
 {

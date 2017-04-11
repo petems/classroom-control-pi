@@ -1,5 +1,5 @@
 class profile::redis ( 
-$master = false
+$master = false,
 ) {
   # We'll require our epel class so that it is enforced first.
   # Don't forget to update that class before enforcing your code
@@ -19,3 +19,4 @@ $master = false
     slaveof => $slaveof,
   }
 }
+

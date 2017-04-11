@@ -7,15 +7,17 @@ $master = false,
   
   if $master {
     $slaveof = undef
+    $bindaddress = '127.0.0.1'
   }
     else {
       $slaveof = 'master.puppetlabs.vm 6479'
+      $bindaddress = $ipaddress
     }
     
   class { 'redis':
     # what parameter should we pass to set maxmemory to 10mb?
     maxmemory => '10mb',
-    bind => $ipaddress,
+    bind => $bindaddress,
     slaveof => $slaveof,
   }
 }

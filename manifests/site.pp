@@ -30,7 +30,7 @@ node default {
   include examples::puppetize
   
   exec {'add cowsay to motd':
-    command => 'cosay "Hello, welcome!"',
+    command => 'cowsay "Hello, welcome!"',
     creates => '/etc/motd',
     path    => $::path,
   }

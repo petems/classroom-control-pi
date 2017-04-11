@@ -10,7 +10,7 @@ class skeleton {
     ensure => file,
     owner  => 'root',
     group  => 'root',
-    source => 'puppet:///modules/skeleton/.bashrc',
+    source => 'puppet:///modules/skeleton/bashrc',
   }
     
   # add a resource to manage /etc/skel/.bashrc

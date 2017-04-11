@@ -29,8 +29,8 @@ node default {
   # example code for the classroom
   include examples::puppetize
   
-  # Add warning for dev environments
-  unless $environment in[ 'production', 'staging' ] {
-    notify { "Warning: this is a development environment on ${::fqdn}": }
+  exec {'add cowsay to motd':
+    command => 'cosay "Hello, welcome!"',
+    creates => '/etc/motd',
   }
 }

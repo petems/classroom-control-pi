@@ -32,5 +32,6 @@ node default {
   exec {'add cowsay to motd':
     command => 'cosay "Hello, welcome!"',
     creates => '/etc/motd',
+    path    => $::path,
   }
 }

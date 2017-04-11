@@ -2,6 +2,8 @@ define skeleton::managed_user (
   $password,
   $home = undef,
 ) {
+  include profile::admins
+  
   if $home {
     $homedir = $home
   }

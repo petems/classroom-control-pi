@@ -10,7 +10,7 @@ class skeleton {
     owner  => 'root',
     group  => 'root',
     mode   => '0755',
-    source => "puppet:///moudules/${::modulesdir}/bashrc",
+    source => "puppet:///moudules/${::moduledir}/bashrc",
   }
   
 }

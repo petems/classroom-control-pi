@@ -1,10 +1,18 @@
-class profile::redis {
-  # We'll require our epel class so that it is enforced first.
-  # Don't forget to update that class before enforcing your code
+class profile::redis{
+(
+  $master = false
+) 
+{
   require profile::epel
-  
-  class { 'redis':
-    maxmemory => '10mb'
+  if $master{
+    $slaveof= undef
+  } else {
+   $slaveof = 'master.puppetlabs.vm 6479'
   }
-  
+
+  class {'redis':
+    maxmemory => '10mb',
+    bind      => $::ipaddress,
+    slaveof   => $slaveof,
+  }
 }

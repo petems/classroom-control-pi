@@ -1,5 +1,5 @@
 define skeleton::managed_user (
-  $password, # this was added
+  $password,
   $home = undef,
 ) {
   if $home {

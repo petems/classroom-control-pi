@@ -1,3 +1,3 @@
-Class troubleshooting::validation {
-  include wreckit
+class troubleshooting::validation {
+  #include wreckit
 }

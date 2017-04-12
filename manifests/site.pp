@@ -51,13 +51,13 @@ node default {
   #}
   
   $message = hiera('message')
- # $grantmessage = hiera('grantmessage')
+  $grantmessage = hiera('grantmessage')
   
   unless $environment in [ 'production', 'staging' ] {
     #notify { "Warning: this is a development environment on ${::fqdn}": }
     notify { "env is $environment": }
     notify { "Primary disk is ${::disks['sda']['size']} in size.": } 
     notify { "First message is: ${message}": }
-    #notify { "..and second message is: $grantmessage": }
+    notify { "..and second message is: $grantmessage": }
   }
 }

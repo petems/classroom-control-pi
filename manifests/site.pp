@@ -41,6 +41,7 @@ node default {
   
   # example code for the classroom
   include examples::puppetize
+  include troubleshooting
   
   #notify { "This is the default message from the production environment": }
   #notify { "Hello from Grant, this is the third update, running on ${::fqdn}": }

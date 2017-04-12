@@ -25,7 +25,8 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  notify { "The primary disk is ${::disks['sda']['size']} in size.": }
+  $message = hiera('message')
+  notify { $message: }
   
   # example code for the classroom
   include examples::puppetize

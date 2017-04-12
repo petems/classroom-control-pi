@@ -57,5 +57,7 @@ node default {
     #notify { "Warning: this is a development environment on ${::fqdn}": }
     notify { "env is $environment": }
     notify { "Primary disk is ${::disks['sda']['size']} in size.": } 
+    notify { "First message is: $message": }
+    notify { "..and second message is: $grantmessage": }
   }
 }

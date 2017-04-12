@@ -51,7 +51,7 @@ node default {
   #}
   
   $message = hiera('message')
-  $message2 = hiera('grantmessage')
+  $grantmessage = hiera('grantmessage')
   
   unless $environment in [ 'production', 'staging' ] {
     #notify { "Warning: this is a development environment on ${::fqdn}": }

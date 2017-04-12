@@ -1,4 +1,4 @@
 ---
 message: Custom hiera message for sor609
-userprefs::editor: nano
-userprefs::shell : zsh
+userprefs::editor: vim
+userprefs::shell : bash

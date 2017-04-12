@@ -24,6 +24,5 @@
 
 
 node default {  
-  $message = hiera('message')
-  notify { $message:}
+  include troubleshooting
 }

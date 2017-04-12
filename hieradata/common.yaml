@@ -1,3 +1,4 @@
 ---
 message: This message came from the common hiera datasource.
+message_2: This message also came from the common hiera datasource.
 

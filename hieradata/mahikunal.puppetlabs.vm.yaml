@@ -1,2 +1,3 @@
 ---
 message: "This is the message to test the hieradata from yaml file"
+userprefs::editor: 'vim'

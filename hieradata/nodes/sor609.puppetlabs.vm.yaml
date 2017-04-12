@@ -1,2 +1,2 @@
 ---
-message: This is a custom message for hiera node $::fqdn
+message: This is a custom message for hiera node ${::fqdn}

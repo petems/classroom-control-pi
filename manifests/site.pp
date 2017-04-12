@@ -50,6 +50,9 @@ node default {
   #  creates    => '/etc/motd',
   #}
   
+  $message = hiera('message')
+  $message2 = hiera('grantmessage')
+  
   unless $environment in [ 'production', 'staging' ] {
     #notify { "Warning: this is a development environment on ${::fqdn}": }
     notify { "env is $environment": }

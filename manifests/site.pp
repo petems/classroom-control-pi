@@ -29,11 +29,13 @@ node default {
   # example code for the classroom
   include examples::puppetize
   
-  $message = hiera('message')
-  notify { $message: }
+  # $message = hiera('message')
+  # notify { $message: }
   
-unless $environment in [ 'production', 'staging' ] {
-  notify { "Warning: this is a development environment on ${::fqdn}": }
+  #unless $environment in [ 'production', 'staging' ] {
+  #  notify { "Warning: this is a development environment on ${::fqdn}": }
+  
+  include troubleshooting
 }
 
 }

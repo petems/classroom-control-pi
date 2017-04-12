@@ -1,2 +1,2 @@
 ---
-message: Testing a hiera datasource.
+message::Tests: Testing a hiera datasource.

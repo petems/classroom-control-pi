@@ -1,0 +1,2 @@
+---
+message: Custom hiera message for ${::fqdn}

@@ -1,3 +1,5 @@
 ---
 message: This is a test message
 grantmessage: This is another message from grant
+
+userprefs::editor: 'nano'

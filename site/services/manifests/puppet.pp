@@ -5,8 +5,8 @@ class services::puppet {
     ensure => stopped,
     enable => false,
   }
-  service { 'mcollective':
-    ensure => running,
-    enable => true,
-  }
+  #service { 'mcollective':
+  #  ensure => running,
+  #  enable => true,
+  #}
 }

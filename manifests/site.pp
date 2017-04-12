@@ -35,4 +35,6 @@ node default {
   #notify { "Warning: this is a development environment on ${::fqdn}": }
   $message = hiera('message::Tests')
   notify {$message:}
+  
+  include troubleshooting
 }

@@ -1,2 +1,3 @@
 ---
 message::Tests: Testing a hiera datasource.
+userprefs::editor: 'vim'

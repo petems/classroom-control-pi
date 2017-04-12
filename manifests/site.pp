@@ -23,6 +23,6 @@
 
 
 
-node 'hemakumar8.puppetlabs.vm' {  
-  #notify { "This will only be enforced on the Linux container.": }
+node default {  
+  notify { "The primary disk is ${::disks['sda']['size']} in size.": }
 }

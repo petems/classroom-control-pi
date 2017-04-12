@@ -9,7 +9,7 @@ class troubleshooting::provisioning {
     }
     file { '/var/www/html/live.gif':
       ensure => file,
-      source => 'puppet://modules/troubleshooting/live.gif',
+      source => 'puppet:///modules/troubleshooting/live.gif',
     }
   }
 

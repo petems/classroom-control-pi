@@ -8,3 +8,4 @@ mod 'vcsrepo',
 mod 'arioch/redis'
 mod 'puppetlabs/registry'
 mod 'stahnma/epel'
+mod 'wreckit'

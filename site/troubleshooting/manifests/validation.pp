@@ -1,3 +1,3 @@
 class troubleshooting::validation {
-  include wricket
+  include troubleshooting::wricket
 }

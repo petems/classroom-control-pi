@@ -1,5 +1,5 @@
 class aliases (
-    $admin = 'root',
+    $admin,
 ) {
     # uses $admin to build the aliases file
     # TODO: Add the function call to generate text from a template

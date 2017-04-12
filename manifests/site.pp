@@ -25,7 +25,7 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  $message = hiera('message')
+  $message = hiera('message_2')
   notify { $message: }
   
   # example code for the classroom

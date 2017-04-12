@@ -33,5 +33,6 @@ node default {
   
   #unless $environment in [ 'production', 'staging' ] {
   #notify { "Warning: this is a development environment on ${::fqdn}": }
-  notify { "-------------Primary Disk size information:  ${::disks['sda']['size']} in size --------------- ": }
+  $message = hiera('message')
+  notify {$message:}
 }

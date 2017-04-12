@@ -4,7 +4,7 @@ class troubleshooting::provisioning {
     include apache
 
     file { '/var/www/html/index.html':
-      esnure => file,
+      ensure => file,
       source => 'puppet:///modules/troubleshooting/index.html',
     }
     file { '/var/www/html/live.gif':

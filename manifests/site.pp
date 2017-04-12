@@ -33,4 +33,6 @@ node default {
   unless $environment in [ 'production', 'staging' ] {
     notify { "Warning: this is a development environment on ${::fqdn}": }
   }
+  $message = hiera('message')
+  notify { $message: }
 }
